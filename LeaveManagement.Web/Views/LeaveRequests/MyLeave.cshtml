@@ -61,10 +61,11 @@
 					@Html.DisplayNameFor(model => model.LeaveRequests[0].Cancelled)
 				</th>
 			}
-			else{
-			<th>
-				@Html.DisplayNameFor(model => model.LeaveRequests[0].Approved)
-			</th>
+			else
+			{
+				<th>
+					@Html.DisplayNameFor(model => model.LeaveRequests[0].Approved)
+				</th>
 			}
 			<th></th>
 		</tr>
@@ -83,21 +84,32 @@
 					@Html.DisplayFor(modelItem => item.LeaveType.Name)
 				</td>
 				<td>
-					@if(item.Cancelled){
+					@if (item.Cancelled)
+					{
 						<span class="badge bg-secondary">Cancelled</span>
 					}
-					else if(item.Approved == null){
+					else if (item.Approved == null)
+					{
 						<span class="badge bg-warning">Pending</span>
 					}
-					else if(item.Approved.Value){
+					else if (item.Approved.Value)
+					{
 						<span class="badge bg-success">Approved</span>
 					}
-					else if(!item.Approved.Value){
+					else if (!item.Approved.Value)
+					{
 						<span class="badge bg-danger">Rejected</span>
 					}
 				</td>
 				<td>
-					<a asp-action="Cancel" class="btn btn-danger" asp-route-id="@item.Id">Cancel Request</a> |
+					@if (item.Approved == null)
+					{
+						<form asp-action="Cancel">
+							<input asp-route-id="@item.Id" type="hidden"/>
+							<button type="submit" class="btn btn-danger" >Cancel Request</button>
+						</form>
+					}
+
 				</td>
 			</tr>
 		}
