@@ -11,6 +11,8 @@ namespace LeaveManagement.Web.Models
         [Display(Name = "Leave Type")]
         public LeaveTypeVM LeaveType { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         [Display(Name = "Date Requested")]
         public DateTime DateCreated { get; set; }
         public string RequestComments { get; set; }

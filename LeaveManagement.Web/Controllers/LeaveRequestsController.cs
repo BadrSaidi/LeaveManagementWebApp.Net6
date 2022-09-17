@@ -72,7 +72,7 @@ namespace LeaveManagement.Web.Controllers
         {
             try
             {
-                await leaveRequestRepository.CancelLeaveRequest(id, approved);
+                await leaveRequestRepository.CancelLeaveRequest(id);
             }
             catch (Exception ex)
             {
