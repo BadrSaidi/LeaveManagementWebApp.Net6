@@ -18,7 +18,7 @@ namespace LeaveManagement.Web.Controllers
             return View();
         }
 
-        public IActionResult Technologies()
+        public IActionResult AccountsCredentials()
         {
             return View();
         }

@@ -15,10 +15,10 @@ namespace LeaveManagement.Web.Configurations.Entities
                 new Employee
                 {
                     Id = "416a431c-b61a-4294-a4a2-b16e3676bb77",
-                    Email = "badr-inter@hotmail.ca",
-                    NormalizedEmail = "BADR-INTER@HOTMAIL.CA",
-                    UserName = "badr-inter@hotmail.ca",
-                    NormalizedUserName = "BADR-INTER@HOTMAIL.CA",
+                    Email = "admin@localhost.com",
+                    NormalizedEmail = "ADMIN@LOCALHOST.COM",
+                    UserName = "admin@localhost.com",
+                    NormalizedUserName = "ADMIN@LOCALHOST.COM",
                     FirstName = "Badr",
                     LastName = "Saidi",
                     PasswordHash = hasher.HashPassword(null, "P@ssword1"),
@@ -28,12 +28,12 @@ namespace LeaveManagement.Web.Configurations.Entities
                 new Employee
                 {
                     Id = "558a431c-b61a-4294-a4a2-b16e3676ce49",
-                    Email = "admin@localhost.com",
-                    NormalizedEmail = "ADMIN@LOCALHOST.COM",
-                    UserName = "admin@localhost.com",
-                    NormalizedUserName = "ADMIN@LOCALHOST.COM",
-                    FirstName = "System",
-                    LastName = "User",
+                    Email = "user@localhost.com",
+                    NormalizedEmail = "USER@LOCALHOST.COM",
+                    UserName = "user@localhost.com",
+                    NormalizedUserName = "USER@LOCALHOST.COM",
+                    FirstName = "Bobby",
+                    LastName = "Shmurda",
                     PasswordHash = hasher.HashPassword(null, "P@ssword1"),
                     EmailConfirmed = true
                 }
